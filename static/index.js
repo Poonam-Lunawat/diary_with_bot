@@ -1,8 +1,9 @@
+
 var date = new Date()
 let display_date = "Date:" + date.toLocaleDateString()
 
 let predicted_emotion;
-let chat_input_data
+
 $(document).ready(function () {
     $("#display_date").html(display_date)
     $('#save_button').prop('disabled', true);
@@ -89,7 +90,7 @@ function askBot() {
             //Clear the text input box after sending message
             $("#bot_input_text").val('');
 
-            chat_input_data = {
+            let chat_input_data = {
                 "user_bot_input_text": user_bot_input_text
             }
 
